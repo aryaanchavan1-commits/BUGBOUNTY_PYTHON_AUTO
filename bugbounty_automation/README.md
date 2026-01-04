@@ -93,6 +93,7 @@ Bug bounty payouts vary significantly based on:
 5. **Network**: Join security communities and learn from experienced researchers
 
 ## 🛠️ Installation
+## clone repository
 
 ### Prerequisites
 - Python 3.13+
@@ -100,7 +101,7 @@ Bug bounty payouts vary significantly based on:
 
 ### Setup
 
-1. **Clone or Download**: Get the automation suite
+1. **Clone or Download**:git clone https://github.com/aryaanchavan1-commits/BUGBOUNTY_PYTHON_AUTO.git
 2. **Install Dependencies**:
    ```bash
    cd bugbounty_automation
@@ -267,3 +268,4 @@ This tool leverages various open-source libraries and security research. Special
 ---
 
 **Disclaimer**: This tool is for educational and authorized security testing purposes only. The authors are not responsible for any misuse or damage caused by this tool. Users must comply with all applicable laws and obtain proper authorization before using this tool.
+
