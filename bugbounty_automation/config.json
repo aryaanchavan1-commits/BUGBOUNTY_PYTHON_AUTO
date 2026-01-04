@@ -1,0 +1,98 @@
+{
+  "api_keys": {
+    "shodan": "",
+    "censys_api_id": "",
+    "censys_secret": "",
+    "vulners_api_key": "",
+    "virustotal_api_key": ""
+  },
+  "settings": {
+    "timeout": 30,
+    "max_concurrent_requests": 10,
+    "user_agent": "BugBountyAutomation/2026",
+    "delay_between_requests": 1,
+    "output_dir": "reports",
+    "log_level": "INFO"
+  },
+  "reconnaissance": {
+    "subdomain_wordlist": [
+      "www", "api", "dev", "test", "admin", "staging", "prod",
+      "beta", "demo", "portal", "app", "dashboard", "secure",
+      "mail", "email", "ftp", "files", "docs", "support",
+      "help", "blog", "shop", "store", "cdn", "static"
+    ],
+    "ports_to_scan": [
+      21, 22, 23, 25, 53, 80, 110, 143, 443, 993, 995,
+      3306, 3389, 5432, 6379, 8080, 8443, 9200, 27017
+    ],
+    "search_engines": [
+      "google", "bing", "yahoo"
+    ],
+    "third_party_services": [
+      "crt.sh", "dns.bufferover.run", "jldc.me"
+    ]
+  },
+  "vulnerability_scanning": {
+    "sql_injection_payloads": [
+      "' OR '1'='1",
+      "' OR 1=1--",
+      "'; DROP TABLE users--",
+      "' UNION SELECT null,null--",
+      "admin'--"
+    ],
+    "xss_payloads": [
+      "<script>alert('XSS')</script>",
+      "javascript:alert('XSS')",
+      "<img src=x onerror=alert('XSS')>",
+      "'\"><script>alert('XSS')</script>",
+      "<svg onload=alert('XSS')>"
+    ],
+    "command_injection_payloads": [
+      "; ls",
+      "| whoami",
+      "&& cat /etc/passwd",
+      "; ping -c 1 127.0.0.1",
+      "| id"
+    ],
+    "path_traversal_payloads": [
+      "../../../etc/passwd",
+      "..\\..\\..\\windows\\system32\\drivers\\etc\\hosts",
+      "....//....//....//etc/passwd",
+      "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd"
+    ],
+    "ssrf_payloads": [
+      "http://127.0.0.1",
+      "http://localhost",
+      "file:///etc/passwd",
+      "http://169.254.169.254/latest/meta-data/"
+    ],
+    "template_injection_payloads": [
+      "{{7*7}}",
+      "${7*7}",
+      "<%= 7*7 %>",
+      "{{7*'7'}}",
+      "${7*'7'}"
+    ]
+  },
+  "reporting": {
+    "include_proof_of_concept": true,
+    "include_recommendations": true,
+    "include_risk_assessment": true,
+    "report_formats": ["pdf", "html", "json"],
+    "bounty_submission_format": "html",
+    "anonymize_sensitive_data": false
+  },
+  "bounty_tracking": {
+    "auto_track_submissions": true,
+    "track_earnings": true,
+    "export_formats": ["json", "csv"],
+    "performance_metrics": true
+  },
+  "headers": {
+    "User-Agent": "BugBountyAutomation/2026",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive"
+  }
+}

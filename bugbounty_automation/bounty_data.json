@@ -1,0 +1,40 @@
+{
+  "submissions": [
+    {
+      "target": "google.com",
+      "timestamp": 1767518373.9632971,
+      "date": "2026-01-04T14:49:33.963299",
+      "vulnerabilities_found": 6,
+      "critical_count": 0,
+      "high_count": 0,
+      "medium_count": 6,
+      "low_count": 0,
+      "risk_score": 24,
+      "status": "pending",
+      "payout": 0,
+      "program": "google"
+    }
+  ],
+  "earnings": {
+    "total": 0,
+    "by_program": {},
+    "by_month": {},
+    "by_year": {}
+  },
+  "programs": {
+    "google": {
+      "name": "google",
+      "submissions": 1,
+      "accepted": 0,
+      "total_payout": 0,
+      "average_payout": 0
+    }
+  },
+  "statistics": {
+    "total_submissions": 1,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "average_payout": 0,
+    "success_rate": 0
+  }
+}
