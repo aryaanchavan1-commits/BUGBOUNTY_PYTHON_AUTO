@@ -269,3 +269,4 @@ This tool leverages various open-source libraries and security research. Special
 
 **Disclaimer**: This tool is for educational and authorized security testing purposes only. The authors are not responsible for any misuse or damage caused by this tool. Users must comply with all applicable laws and obtain proper authorization before using this tool.
 
+
